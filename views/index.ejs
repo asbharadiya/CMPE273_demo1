@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Profile</title>
+<link rel='stylesheet' href='/stylesheets/style.css' />
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-xs-12 col-md-offset-3 col-md-6 col-lg-offset-4 col-lg-4">
+				<div class="panel panel-primary">
+					<div class="panel-heading text-center">
+						<h4>Profile</h4>
+					</div>
+				  	<div class="panel-body">
+				  		<div class="row form-group">
+							<label class="control-label col-xs-12 col-sm-4">First Name:</label>
+						    	<div class="col-xs-12 col-sm-8">
+						    		<span><%= userData.firstName %></span>
+						    	</div>
+						</div>
+						<div class="row form-group">
+							<label class="control-label col-xs-12 col-sm-4">Last Name:</label>
+						    	<div class="col-xs-12 col-sm-8">
+						    		<span><%= userData.lastName %></span>
+						    	</div>
+						</div>
+						<div class="row form-group">
+							<label class="control-label col-xs-12 col-sm-4">Date Of Birth:</label>
+						    	<div class="col-xs-12 col-sm-8">
+						    		<span><%= moment(userData.dateOfBirth).format('MM-DD-YYYY') %></span>
+						    	</div>
+						</div>
+						<div class="row form-group">
+							<label class="control-label col-xs-12 col-sm-4">Gender:</label>
+						    	<div class="col-xs-12 col-sm-8">
+						    		<span><%= userData.gender %></span>
+						    	</div>
+						</div>
+						<div class="row form-group text-right">
+							<div class="col-xs-12">
+								<a class="btn btn-danger" href="/login">Logout</a>
+							</div>
+						</div>
+				  	</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
